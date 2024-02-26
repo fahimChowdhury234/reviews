@@ -384,56 +384,9 @@
             actionBtns.style.display = "none";
          }
 
-         // document.addEventListener("DOMContentLoaded", function () {
-         //    const stars = document.querySelectorAll(".stars .star");
-
-         //    stars.forEach((star) => {
-         //       // Hover event
-         //       star.addEventListener("mouseover", function () {
-         //          const color = this.dataset.color;
-         //          this.querySelector("svg").style.fill = color;
-         //       });
-
-         //       // Click event
-         //       star.addEventListener("click", function () {
-         //          const color = this.dataset.color;
-         //          this.querySelector("svg").style.fill = color;
-         //          // Remove hover effect after click
-         //          this.removeEventListener("mouseover", hoverFunction);
-         //       });
-
-         //       // Hover out event
-         //       star.addEventListener("mouseout", function () {
-         //          this.querySelector("svg").style.fill = ""; // Reset to default color
-         //       });
-         //    });
-         // });
          document.addEventListener("DOMContentLoaded", function () {
             const stars = document.querySelectorAll(".stars .star");
 
-            // stars.forEach((star, index) => {
-            //    const color = star.dataset.color;
-
-            //    // Click event
-            //    star.addEventListener("click", function () {
-            //       // Set the fill color for all stars up to the current star
-            //       for (let i = 0; i <= index; i++) {
-            //          const svg = stars[i].querySelector("svg");
-            //          svg.querySelectorAll("path").forEach((path) => {
-            //             path.style.fill = color; // Fill color
-            //             path.style.stroke = color; // Stroke color
-            //          });
-            //       }
-            //       // Reset the fill color for stars after the current star
-            //       for (let i = index + 1; i < stars.length; i++) {
-            //          const svg = stars[i].querySelector("svg");
-            //          svg.querySelectorAll("path").forEach((path) => {
-            //             path.style.fill = ""; // Reset fill color
-            //             path.style.stroke = ""; // Reset stroke color
-            //          });
-            //       }
-            //    });
-            // });
             stars.forEach((star, index) => {
                const color = star.dataset.color;
 
