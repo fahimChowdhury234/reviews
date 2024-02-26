@@ -1,0 +1,338 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.review-section {
+    padding: 30px 0;
+}
+
+.reviewTitel {
+    margin-bottom: 40px;
+}
+
+.reviewTitel h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.review-tabs {
+
+    border-bottom: 1px solid #999;
+}
+
+.review-tabs ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.review-tabs ul li {
+    padding: 0 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.review-tabs ul li.active {
+    border-bottom: 2px solid #111;
+    font-weight: 500;
+}
+
+.review-table {
+    padding: 30px 0;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+
+}
+
+.td-img {
+    width: 160px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #999;
+}
+
+.td-img figure {
+    margin: 0;
+    width: 100%;
+    height: 83%;
+
+}
+
+.td-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.td-img .text {
+    padding: 5px 10px;
+    background-color: #0fd144;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.td-img .not-review {
+    background-color: #ea1c26 !important;
+}
+
+.td-action {
+    height: 100%;
+}
+
+.td-action .threeDot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.td-action .threeDot svg {
+    width: 30px;
+    cursor: pointer;
+
+}
+
+.td-action button {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: #111;
+    color: #fff;
+    padding: 10px 10px;
+
+}
+
+.tdBorder {
+    border: 1px solid #eee;
+    border-right: none;
+    border-left: none !important;
+
+}
+
+tbody tr td {
+    padding: 0;
+}
+
+tbody tr td:first-child {
+    border: 1px solid #eee;
+    border-right: none;
+    border-left: 1px solid #eee !important;
+}
+
+tbody tr td:last-child {
+    border: 1px solid #eee;
+    border-right: 1px solid #eee !important;
+    border-left: none !important;
+}
+
+.modal-dialog {
+    max-width: 480px;
+}
+
+.modal-body {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.modal-body h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.modal-body p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.recomend {
+    margin-top: 30px;
+}
+
+.recomend h4 {
+    font-size: 20px;
+
+}
+
+.recomend-btn {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.recomend-btn button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.recomend-btn button svg {
+    width: 22px;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    z-index: 99;
+}
+
+
+.stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 45px 0;
+}
+
+.stars button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #eee;
+
+}
+
+.stars button svg {
+    width: 30px;
+
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.leavetext label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.leavetext textarea {
+    overflow: hidden;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 85%;
+    outline: none;
+}
+
+.enter {
+    margin: 20px 0;
+}
+
+.enter button {
+    padding: 10px 50px;
+    background-color: #111;
+    color: #fff;
+}
+
+.actionBtns {
+    position: absolute;
+    top: 30px;
+    left: -69px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 88888;
+}
+
+.action-card {
+    width: 170px;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 4px;
+    position: relative;
+
+}
+
+.action-item {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 5px 10px;
+    color: #999;
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+
+}
+
+.action-item svg {
+    width: 30px !important;
+
+}
+
+.action-item span {
+    font-size: 16px;
+    color: #111;
+    font-weight: 500;
+}
+
+.actionBtnsOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d1c6c678;
+    z-index: -1;
+}
+
+.closeactionBtns {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -12px;
+    right: -16px;
+    background-color: #ea1c26;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+.closeactionBtns svg {
+    width: 15px !important;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 300px) {
+    table {
+        width: 900px;
+    }
+
+    .actionBtns {
+        position: absolute;
+        top: 37px;
+        left: -154px;
+    }
+
+    .review-table {
+        overflow-x: auto;
+    }
+}
