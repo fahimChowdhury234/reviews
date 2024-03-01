@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Sold/Not Sold</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800;900&display=swap" as="style" crossorigin="anonymous" />
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <main>
+         <div class="main-box-wrapper">
+            <section class="sideBar">
+               <h3>User Name</h3>
+               <div class="sideBar-ul-wrapper">
+                  <ul class="sideBar-ul">
+                     <li>
+                        Massage
+                        <span>Comunication with buyers</span>
+                     </li>
+                     <li>
+                        Watching
+                        <span>Watching your item</span>
+                     </li>
+                     <li>
+                        Bidding/Bought
+                        <span>Currently bidding or bought</span>
+                     </li>
+                     <li>
+                        Sold/Not sold
+                        <span>sold item or not sold item</span>
+                     </li>
+                     <li>
+                        Reviews
+                        <span>Reviews to seller or buyers</span>
+                     </li>
+                     <li>
+                        Setting
+                        <span>Payment,Payout,Address</span>
+                     </li>
+                     <li>
+                        Profile
+                        <span>All your -- and reviews</span>
+                     </li>
+                     <li>Logout</li>
+                  </ul>
+               </div>
+            </section>
+            <section class="review-section">
+               <div class="review-section-container">
+                  <div class="reviewTitel d-flex justify-content-between">
+                     <h2>Sold/Not Sold</h2>
+                     <button class="toggleSidebar bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                     </button>
+                  </div>
+                  <div class="review-tabs">
+                     <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                           <button class="nav-link active" id="nav-sold-tab" data-bs-toggle="tab" data-bs-target="#nav-sold" type="button" role="tab" aria-controls="nav-sold" aria-selected="false">
+                              Sold
+                           </button>
+                           <button
+                              class="nav-link"
+                              id="nav-not-sold-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-not-sold"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-not-sold"
+                              aria-selected="false"
+                           >
+                              Not sold
+                           </button>
+                           <button class="nav-link" id="nav-hidden-tab" data-bs-toggle="tab" data-bs-target="#nav-hidden" type="button" role="tab" aria-controls="nav-hidden" aria-selected="true">
+                              Hidden
+                           </button>
+                        </div>
+                     </nav>
+                  </div>
+                  <div class="tab-content" id="nav-tabContent">
+                     <div class="tab-pane fade show active" id="nav-sold" role="tabpanel" aria-labelledby="nav-sold-tab">
+                        <div class="review-table tab-pane fade show active" id="nav-buyers" role="tabpanel" aria-labelledby="nav-buyers-tab">
+                           <table>
+                              <thead>
+                                 <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+
+                                    <th>Price</th>
+                                    <th>Ended</th>
+
+                                    <th>Listing number</th>
+
+                                    <th>Bids</th>
+                                    <th>Action</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="tdBorder">
+                                       <div class="td-img">
+                                          <figure>
+                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyRex7sIWzXZCZF09MioICPVHN3e7gexDzKDKBckIWMvoYF61tKvziNQRzRDymjQj5Fqo&usqp=CAU" alt="" />
+                                          </figure>
+                                          <div class="text">Review left</div>
+                                       </div>
+                                    </td>
+                                    <td class="tdBorder">Sipper comic</td>
+
+                                    <td class="tdBorder">$120</td>
+                                    <td class="tdBorder">January 20 12:12AM</td>
+
+                                    <td class="tdBorder">123-567-897</td>
+                                    <td class="tdBorder">-</td>
+
+                                    <td class="position-relative tdBorder">
+                                       <div class="td-action">
+                                          <div class="threeDot">
+                                             <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                onclick="openActionBtns(this)"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                             >
+                                                <path
+                                                   stroke-linecap="round"
+                                                   stroke-linejoin="round"
+                                                   d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                                                />
+                                             </svg>
+                                             <div class="actionBtns" style="display: none">
+                                                <div class="actionBtnsOverlay"></div>
+                                                <div class="action-card">
+                                                   <div class="closeactionBtns" onclick="closeActionBtns(this)">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                   </div>
+                                                   <div class="action-item text-center">
+                                                      <span>Upload Listing again</span>
+                                                   </div>
+
+                                                   <div class="action-item border-0">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="m6.72 5.66 11.62 11.62A8.25 8.25 0 0 0 6.72 5.66Zm10.56 12.68L5.66 6.72a8.25 8.25 0 0 0 11.62 11.62ZM5.105 5.106c3.807-3.808 9.98-3.808 13.788 0 3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                      <span>Hide</span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tdBorder">
+                                       <div class="td-img">
+                                          <figure>
+                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyRex7sIWzXZCZF09MioICPVHN3e7gexDzKDKBckIWMvoYF61tKvziNQRzRDymjQj5Fqo&usqp=CAU" alt="" />
+                                          </figure>
+                                          <div class="text">Review left</div>
+                                       </div>
+                                    </td>
+                                    <td class="tdBorder">Sipper comic</td>
+
+                                    <td class="tdBorder">$120</td>
+                                    <td class="tdBorder">January 20 12:12AM</td>
+
+                                    <td class="tdBorder">123-567-897</td>
+                                    <td class="tdBorder">-</td>
+
+                                    <td class="position-relative tdBorder">
+                                       <div class="td-action">
+                                          <div class="threeDot">
+                                             <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                onclick="openActionBtns(this)"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                             >
+                                                <path
+                                                   stroke-linecap="round"
+                                                   stroke-linejoin="round"
+                                                   d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                                                />
+                                             </svg>
+
+                                             <div class="actionBtns" style="display: none">
+                                                <div class="actionBtnsOverlay"></div>
+                                                <div class="action-card">
+                                                   <div class="closeactionBtns" onclick="closeActionBtns(this)">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                   </div>
+                                                   <div class="action-item text-center">
+                                                      <span>Upload Listing again</span>
+                                                   </div>
+
+                                                   <div class="action-item border-0">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="m6.72 5.66 11.62 11.62A8.25 8.25 0 0 0 6.72 5.66Zm10.56 12.68L5.66 6.72a8.25 8.25 0 0 0 11.62 11.62ZM5.105 5.106c3.807-3.808 9.98-3.808 13.788 0 3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                      <span>Hide</span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="nav-not-sold" role="tabpanel" aria-labelledby="nav-not-sold-tab">
+                        <div class="review-table tab-pane fade show active" id="nav-buyers" role="tabpanel" aria-labelledby="nav-buyers-tab">
+                           <table>
+                              <thead>
+                                 <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+
+                                    <th>Price</th>
+                                    <th>Ended</th>
+
+                                    <th>Listing number</th>
+
+                                    <th>Bids</th>
+                                    <th>Action</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="tdBorder">
+                                       <div class="td-img">
+                                          <figure>
+                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyRex7sIWzXZCZF09MioICPVHN3e7gexDzKDKBckIWMvoYF61tKvziNQRzRDymjQj5Fqo&usqp=CAU" alt="" />
+                                          </figure>
+                                          <div class="text">Review left</div>
+                                       </div>
+                                    </td>
+                                    <td class="tdBorder">Sipper comic</td>
+
+                                    <td class="tdBorder">$120</td>
+                                    <td class="tdBorder">January 20 12:12AM</td>
+
+                                    <td class="tdBorder">123-567-897</td>
+                                    <td class="tdBorder">-</td>
+
+                                    <td class="position-relative tdBorder">
+                                       <div class="td-action">
+                                          <div class="threeDot">
+                                             <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                onclick="openActionBtns(this)"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                             >
+                                                <path
+                                                   stroke-linecap="round"
+                                                   stroke-linejoin="round"
+                                                   d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                                                />
+                                             </svg>
+                                             <div class="actionBtns" style="display: none">
+                                                <div class="actionBtnsOverlay"></div>
+                                                <div class="action-card">
+                                                   <div class="closeactionBtns" onclick="closeActionBtns(this)">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                   </div>
+                                                   <div class="action-item text-center">
+                                                      <span>Upload Listing again</span>
+                                                   </div>
+
+                                                   <div class="action-item border-0">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="m6.72 5.66 11.62 11.62A8.25 8.25 0 0 0 6.72 5.66Zm10.56 12.68L5.66 6.72a8.25 8.25 0 0 0 11.62 11.62ZM5.105 5.106c3.807-3.808 9.98-3.808 13.788 0 3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                      <span>Hide</span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tdBorder">
+                                       <div class="td-img">
+                                          <figure>
+                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyRex7sIWzXZCZF09MioICPVHN3e7gexDzKDKBckIWMvoYF61tKvziNQRzRDymjQj5Fqo&usqp=CAU" alt="" />
+                                          </figure>
+                                          <div class="text">Review left</div>
+                                       </div>
+                                    </td>
+                                    <td class="tdBorder">Sipper comic</td>
+
+                                    <td class="tdBorder">$120</td>
+                                    <td class="tdBorder">January 20 12:12AM</td>
+
+                                    <td class="tdBorder">123-567-897</td>
+                                    <td class="tdBorder">-</td>
+
+                                    <td class="position-relative tdBorder">
+                                       <div class="td-action">
+                                          <div class="threeDot">
+                                             <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                onclick="openActionBtns(this)"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                             >
+                                                <path
+                                                   stroke-linecap="round"
+                                                   stroke-linejoin="round"
+                                                   d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                                                />
+                                             </svg>
+
+                                             <div class="actionBtns" style="display: none">
+                                                <div class="actionBtnsOverlay"></div>
+                                                <div class="action-card">
+                                                   <div class="closeactionBtns" onclick="closeActionBtns(this)">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                   </div>
+                                                   <div class="action-item text-center">
+                                                      <span>Upload Listing again</span>
+                                                   </div>
+
+                                                   <div class="action-item border-0">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="m6.72 5.66 11.62 11.62A8.25 8.25 0 0 0 6.72 5.66Zm10.56 12.68L5.66 6.72a8.25 8.25 0 0 0 11.62 11.62ZM5.105 5.106c3.807-3.808 9.98-3.808 13.788 0 3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                      <span>Hide</span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="review-table tab-pane fade" id="nav-hidden" role="tabpanel" aria-labelledby="nav-hidden-tab">hidden</div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </main>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+         crossorigin="anonymous"
+      ></script>
+      <script>
+         function openActionBtns(btn) {
+            var actionBtns = btn.nextElementSibling;
+            if (actionBtns.style.display === "none") {
+               actionBtns.style.display = "block";
+            } else {
+               actionBtns.style.display = "none";
+            }
+         }
+
+         function closeActionBtns(btn) {
+            var actionBtns = btn.parentElement.parentElement; // Go up the DOM tree to the actionBtns div
+            actionBtns.style.display = "none";
+         }
+
+         document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".stars .star");
+
+            stars.forEach((star, index) => {
+               const color = star.dataset.color;
+
+               // Click event
+               star.addEventListener("click", function () {
+                  // Set the fill color for all stars up to the current star
+                  for (let i = 0; i <= index; i++) {
+                     const svg = stars[i].querySelector("svg");
+                     svg.querySelectorAll("path").forEach((path) => {
+                        console.log(path);
+                        path.style.fill = color;
+                        path.style.stroke = color; // Fill color
+                     });
+                  }
+                  // Reset the fill color for stars after the current star
+                  for (let i = index + 1; i < stars.length; i++) {
+                     const svg = stars[i].querySelector("svg");
+                     svg.querySelectorAll("path").forEach((path) => {
+                        path.style.fill = ""; // Reset fill color
+                        path.style.stroke = ""; // Fill color
+                     });
+                  }
+               });
+            });
+
+            const likeButton = document.querySelector(".recomend-btn button:nth-child(1)");
+            const dislikeButton = document.querySelector(".recomend-btn button:nth-child(2)");
+            const likeIcon = likeButton.querySelector("svg");
+            const dislikeIcon = dislikeButton.querySelector("svg");
+
+            likeButton.addEventListener("click", function () {
+               likeButton.style.backgroundColor = "green";
+               dislikeButton.style.backgroundColor = "";
+               likeIcon.style.fill = "#fff";
+               dislikeIcon.style.fill = "";
+            });
+
+            dislikeButton.addEventListener("click", function () {
+               dislikeButton.style.backgroundColor = "red";
+               likeButton.style.backgroundColor = "";
+               dislikeIcon.style.fill = "#fff";
+               likeIcon.style.fill = "";
+            });
+            const toggleSidebar = document.querySelector(".toggleSidebar");
+            const sideBar = document.querySelector(".sideBar");
+            toggleSidebar.addEventListener("click", () => {
+               sideBar.classList.toggle("active");
+            });
+         });
+      </script>
+   </body>
+</html>

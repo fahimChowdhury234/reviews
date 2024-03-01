@@ -78,13 +78,32 @@ body {
     text-transform: capitalize;
 }
 
-.review-tabs ul li.active {
+.review-tabs .nav-link {
+    border: none;
+    color: #999;
+}
+
+.review-tabs .nav-link.active {
     border-bottom: 2px solid #111;
+    color: #111;
+
+}
+
+.table-w-18 {
+    width: 18%;
+}
+
+.review-tabs ul li.active {
     font-weight: 500;
 }
 
 .review-table {
     padding: 30px 0;
+}
+
+.bids {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 table {
@@ -226,9 +245,9 @@ tbody tr td:last-child {
     width: 22px;
 }
 
-.modal-header {
+/* .modal-header {
     border: none;
-}
+} */
 
 .modal-header .btn-close {
     position: absolute;

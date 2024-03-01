@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Bidding/Bought</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;800;900&display=swap" as="style" crossorigin="anonymous" />
+      <link rel="stylesheet" href="./style.css" />
+   </head>
+   <body>
+      <main>
+         <div class="main-box-wrapper">
+            <section class="sideBar">
+               <h3>User Name</h3>
+               <div class="sideBar-ul-wrapper">
+                  <ul class="sideBar-ul">
+                     <li>
+                        Massage
+                        <span>Comunication with buyers</span>
+                     </li>
+                     <li>
+                        Watching
+                        <span>Watching your item</span>
+                     </li>
+                     <li>
+                        Bidding/Bought
+                        <span>Currently bidding or bought</span>
+                     </li>
+                     <li>
+                        Sold/Not sold
+                        <span>sold item or not sold item</span>
+                     </li>
+                     <li>
+                        Reviews
+                        <span>Reviews to seller or buyers</span>
+                     </li>
+                     <li>
+                        Setting
+                        <span>Payment,Payout,Address</span>
+                     </li>
+                     <li>
+                        Profile
+                        <span>All your -- and reviews</span>
+                     </li>
+                     <li>Logout</li>
+                  </ul>
+               </div>
+            </section>
+            <section class="review-section">
+               <div class="review-section-container">
+                  <div class="reviewTitel d-flex justify-content-between">
+                     <h2>Bidding/Bought</h2>
+                     <button class="toggleSidebar bg-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                     </button>
+                  </div>
+                  <div class="review-tabs">
+                     <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                           <button
+                              class="nav-link active"
+                              id="nav-bidding-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-bidding"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-bidding"
+                              aria-selected="false"
+                           >
+                              Bidding
+                           </button>
+                           <button class="nav-link" id="nav-bought-tab" data-bs-toggle="tab" data-bs-target="#nav-bought" type="button" role="tab" aria-controls="nav-bought" aria-selected="false">
+                              Bought
+                           </button>
+                           <button class="nav-link" id="nav-hidden-tab" data-bs-toggle="tab" data-bs-target="#nav-hidden" type="button" role="tab" aria-controls="nav-hidden" aria-selected="true">
+                              Hidden
+                           </button>
+                        </div>
+                     </nav>
+                  </div>
+                  <div class="tab-content" id="nav-tabContent">
+                     <div class="tab-pane fade show active" id="nav-bidding" role="tabpanel" aria-labelledby="nav-bidding-tab">
+                        <div class="review-table tab-pane fade show active" id="nav-buyers" role="tabpanel" aria-labelledby="nav-buyers-tab">
+                           <table>
+                              <thead>
+                                 <tr>
+                                    <th>Start Price</th>
+                                    <th>Current Bid</th>
+                                    <th>Seller</th>
+                                    <th>Ending</th>
+                                    <th>Bids</th>
+                                    <th colspan="2"></th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="tdBorder table-w-18">
+                                       $120
+                                       <div class="td-img">
+                                          <figure>
+                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyRex7sIWzXZCZF09MioICPVHN3e7gexDzKDKBckIWMvoYF61tKvziNQRzRDymjQj5Fqo&usqp=CAU" alt="" />
+                                          </figure>
+                                          <div class="text">Review left</div>
+                                       </div>
+                                    </td>
+
+                                    <td class="tdBorder table-w-18">$120</td>
+                                    <td class="tdBorder table-w-18">*userName*</td>
+                                    <td class="tdBorder table-w-18">January 20 12:12AM</td>
+                                    <td class="tdBorder table-w-18"><span class="bids" data-bs-toggle="modal" data-bs-target="#exampleModal2">4Bids</span></td>
+
+                                    <td class="position-relative tdBorder table-w-20" colspan="2">
+                                       <div class="td-action">
+                                          <div class="threeDot">
+                                             <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                                onclick="openActionBtns(this)"
+                                             >
+                                                <path
+                                                   stroke-linecap="round"
+                                                   stroke-linejoin="round"
+                                                   d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                                                />
+                                             </svg>
+                                             <div class="actionBtns" style="display: none">
+                                                <div class="actionBtnsOverlay"></div>
+                                                <div class="action-card">
+                                                   <div class="closeactionBtns" onclick="closeActionBtns(this)">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                   </div>
+                                                   <div class="action-item text-center">
+                                                      <span>Order Information</span>
+                                                   </div>
+                                                   <div class="action-item text-center">
+                                                      <span>Contact</span>
+                                                   </div>
+                                                   <div class="action-item border-0">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="m6.72 5.66 11.62 11.62A8.25 8.25 0 0 0 6.72 5.66Zm10.56 12.68L5.66 6.72a8.25 8.25 0 0 0 11.62 11.62ZM5.105 5.106c3.807-3.808 9.98-3.808 13.788 0 3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                      <span>Hide</span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="tdBorder table-w-18">
+                                       $120
+                                       <div class="td-img">
+                                          <figure>
+                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyRex7sIWzXZCZF09MioICPVHN3e7gexDzKDKBckIWMvoYF61tKvziNQRzRDymjQj5Fqo&usqp=CAU" alt="" />
+                                          </figure>
+                                          <div class="text">Review left</div>
+                                       </div>
+                                    </td>
+
+                                    <td class="tdBorder table-w-18">$120</td>
+                                    <td class="tdBorder table-w-18">*userName*</td>
+                                    <td class="tdBorder table-w-18">January 20 12:12AM</td>
+                                    <td class="tdBorder table-w-18"><span class="4bids" data-bs-toggle="modal" data-bs-target="#exampleModal2">4Bids</span></td>
+
+                                    <td class="position-relative tdBorder table-w-20" colspan="2">
+                                       <div class="td-action">
+                                          <div class="threeDot">
+                                             <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                                onclick="openActionBtns(this)"
+                                             >
+                                                <path
+                                                   stroke-linecap="round"
+                                                   stroke-linejoin="round"
+                                                   d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                                                />
+                                             </svg>
+                                             <div class="actionBtns" style="display: none">
+                                                <div class="actionBtnsOverlay"></div>
+                                                <div class="action-card">
+                                                   <div class="closeactionBtns" onclick="closeActionBtns(this)">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                   </div>
+                                                   <div class="action-item">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="m6.72 5.66 11.62 11.62A8.25 8.25 0 0 0 6.72 5.66Zm10.56 12.68L5.66 6.72a8.25 8.25 0 0 0 11.62 11.62ZM5.105 5.106c3.807-3.808 9.98-3.808 13.788 0 3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                      <span>Hide</span>
+                                                   </div>
+                                                   <div class="action-item border-0">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                      <span>Remove</span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- Modal -->
+                           <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                              <div class="modal-dialog">
+                                 <div class="modal-content">
+                                    <div class="modal-header">
+                                       <h3 class="text-center">Bidders</h3>
+                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body py-2">
+                                       <div class="px-3">
+                                          <table class="table table-bordered" style="text-align: left; border-spacing: 0">
+                                             <tbody>
+                                                <tr>
+                                                   <td>*userName*</td>
+                                                   <td>$200</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>*userName*</td>
+                                                   <td>$200</td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="nav-bought" role="tabpanel" aria-labelledby="nav-bought-tab">
+                        <div class="review-table tab-pane fade show active" id="nav-buyers" role="tabpanel" aria-labelledby="nav-buyers-tab">
+                           <table>
+                              <thead>
+                                 <tr>
+                                    <th>Price</th>
+
+                                    <th>Seller</th>
+                                    <th>Ending</th>
+
+                                    <th colspan="2"></th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="tdBorder table-w-18">
+                                       $120
+                                       <div class="td-img">
+                                          <figure>
+                                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyRex7sIWzXZCZF09MioICPVHN3e7gexDzKDKBckIWMvoYF61tKvziNQRzRDymjQj5Fqo&usqp=CAU" alt="" />
+                                          </figure>
+                                          <div class="text">Review left</div>
+                                       </div>
+                                    </td>
+
+                                    <td class="tdBorder">*userName*</td>
+                                    <td class="tdBorder">January 20 12:12AM</td>
+
+                                    <td class="position-relative tdBorder" colspan="2">
+                                       <div class="td-action">
+                                          <div class="threeDot">
+                                             <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke-width="1.5"
+                                                stroke="currentColor"
+                                                class="w-6 h-6"
+                                                onclick="openActionBtns(this)"
+                                             >
+                                                <path
+                                                   stroke-linecap="round"
+                                                   stroke-linejoin="round"
+                                                   d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                                                />
+                                             </svg>
+                                             <div class="actionBtns" style="display: none">
+                                                <div class="actionBtnsOverlay"></div>
+                                                <div class="action-card">
+                                                   <div class="closeactionBtns" onclick="closeActionBtns(this)">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                   </div>
+                                                   <div class="action-item text-center">
+                                                      <span>Order Information</span>
+                                                   </div>
+                                                   <div class="action-item text-center">
+                                                      <span>Contact</span>
+                                                   </div>
+                                                   <div class="action-item border-0">
+                                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                         <path
+                                                            fill-rule="evenodd"
+                                                            d="m6.72 5.66 11.62 11.62A8.25 8.25 0 0 0 6.72 5.66Zm10.56 12.68L5.66 6.72a8.25 8.25 0 0 0 11.62 11.62ZM5.105 5.106c3.807-3.808 9.98-3.808 13.788 0 3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788Z"
+                                                            clip-rule="evenodd"
+                                                         />
+                                                      </svg>
+                                                      <span>Hide</span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div class="review-table tab-pane fade" id="nav-hidden" role="tabpanel" aria-labelledby="nav-hidden-tab">hidden</div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </main>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+         crossorigin="anonymous"
+      ></script>
+      <script>
+         function openActionBtns(btn) {
+            var actionBtns = btn.nextElementSibling;
+            if (actionBtns.style.display === "none") {
+               actionBtns.style.display = "block";
+            } else {
+               actionBtns.style.display = "none";
+            }
+         }
+
+         function closeActionBtns(btn) {
+            var actionBtns = btn.parentElement.parentElement; // Go up the DOM tree to the actionBtns div
+            actionBtns.style.display = "none";
+         }
+
+         document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".stars .star");
+
+            stars.forEach((star, index) => {
+               const color = star.dataset.color;
+
+               // Click event
+               star.addEventListener("click", function () {
+                  // Set the fill color for all stars up to the current star
+                  for (let i = 0; i <= index; i++) {
+                     const svg = stars[i].querySelector("svg");
+                     svg.querySelectorAll("path").forEach((path) => {
+                        console.log(path);
+                        path.style.fill = color;
+                        path.style.stroke = color; // Fill color
+                     });
+                  }
+                  // Reset the fill color for stars after the current star
+                  for (let i = index + 1; i < stars.length; i++) {
+                     const svg = stars[i].querySelector("svg");
+                     svg.querySelectorAll("path").forEach((path) => {
+                        path.style.fill = ""; // Reset fill color
+                        path.style.stroke = ""; // Fill color
+                     });
+                  }
+               });
+            });
+
+            const likeButton = document.querySelector(".recomend-btn button:nth-child(1)");
+            const dislikeButton = document.querySelector(".recomend-btn button:nth-child(2)");
+            const likeIcon = likeButton.querySelector("svg");
+            const dislikeIcon = dislikeButton.querySelector("svg");
+
+            likeButton.addEventListener("click", function () {
+               likeButton.style.backgroundColor = "green";
+               dislikeButton.style.backgroundColor = "";
+               likeIcon.style.fill = "#fff";
+               dislikeIcon.style.fill = "";
+            });
+
+            dislikeButton.addEventListener("click", function () {
+               dislikeButton.style.backgroundColor = "red";
+               likeButton.style.backgroundColor = "";
+               dislikeIcon.style.fill = "#fff";
+               likeIcon.style.fill = "";
+            });
+            const toggleSidebar = document.querySelector(".toggleSidebar");
+            const sideBar = document.querySelector(".sideBar");
+            toggleSidebar.addEventListener("click", () => {
+               sideBar.classList.toggle("active");
+            });
+         });
+      </script>
+   </body>
+</html>
