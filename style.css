@@ -416,7 +416,7 @@ button {
         height: 100%;
     }
 
-    .active {
+    .sideBar.active {
         opacity: 1;
         visibility: visible;
         transform: translateX(0);

@@ -240,7 +240,7 @@
                            </table>
                            <!-- Modal -->
                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-                              <div class="modal-dialog">
+                              <div class="modal-dialog modal-dialog-centered">
                                  <div class="modal-content">
                                     <div class="modal-header">
                                        <h3 class="text-center">Bidders</h3>
@@ -378,58 +378,10 @@
             var actionBtns = btn.parentElement.parentElement; // Go up the DOM tree to the actionBtns div
             actionBtns.style.display = "none";
          }
-
-         document.addEventListener("DOMContentLoaded", function () {
-            const stars = document.querySelectorAll(".stars .star");
-
-            stars.forEach((star, index) => {
-               const color = star.dataset.color;
-
-               // Click event
-               star.addEventListener("click", function () {
-                  // Set the fill color for all stars up to the current star
-                  for (let i = 0; i <= index; i++) {
-                     const svg = stars[i].querySelector("svg");
-                     svg.querySelectorAll("path").forEach((path) => {
-                        console.log(path);
-                        path.style.fill = color;
-                        path.style.stroke = color; // Fill color
-                     });
-                  }
-                  // Reset the fill color for stars after the current star
-                  for (let i = index + 1; i < stars.length; i++) {
-                     const svg = stars[i].querySelector("svg");
-                     svg.querySelectorAll("path").forEach((path) => {
-                        path.style.fill = ""; // Reset fill color
-                        path.style.stroke = ""; // Fill color
-                     });
-                  }
-               });
-            });
-
-            const likeButton = document.querySelector(".recomend-btn button:nth-child(1)");
-            const dislikeButton = document.querySelector(".recomend-btn button:nth-child(2)");
-            const likeIcon = likeButton.querySelector("svg");
-            const dislikeIcon = dislikeButton.querySelector("svg");
-
-            likeButton.addEventListener("click", function () {
-               likeButton.style.backgroundColor = "green";
-               dislikeButton.style.backgroundColor = "";
-               likeIcon.style.fill = "#fff";
-               dislikeIcon.style.fill = "";
-            });
-
-            dislikeButton.addEventListener("click", function () {
-               dislikeButton.style.backgroundColor = "red";
-               likeButton.style.backgroundColor = "";
-               dislikeIcon.style.fill = "#fff";
-               likeIcon.style.fill = "";
-            });
-            const toggleSidebar = document.querySelector(".toggleSidebar");
-            const sideBar = document.querySelector(".sideBar");
-            toggleSidebar.addEventListener("click", () => {
-               sideBar.classList.toggle("active");
-            });
+         const toggleSidebar = document.querySelector(".toggleSidebar");
+         const sideBar = document.querySelector(".sideBar");
+         toggleSidebar.addEventListener("click", () => {
+            sideBar.classList.toggle("active");
          });
       </script>
    </body>
